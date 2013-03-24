@@ -1,12 +1,20 @@
 package com.ruben;
 
-// -----------------------
-// Bank account superclass
-// -----------------------
+import java.util.HashMap;
+
+/**
+ * @author Petr Ruben
+ *
+ *
+ * -------------------------
+ * Bank account subclass
+ * -------------------------
+ */
 public class BankAccount
 {
-  protected double interest_rate,
-                   balance;
+  protected double interest_rate;
+  protected double balance;
+  private HashMap<String, Customer> customers = new HashMap<String, Customer>();
 
   public BankAccount(double i, double b)
   {

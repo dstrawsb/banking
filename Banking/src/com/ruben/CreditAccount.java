@@ -1,8 +1,13 @@
 package com.ruben;
 
-// -------------------------
-// Credit account subclass
-// -------------------------
+/**
+ * @author Petr Ruben
+ *
+ *
+ * -------------------------
+ * Credit account subclass
+ * -------------------------
+ */
 public class CreditAccount extends BankAccount
 {
   public CreditAccount(double i, double b)
