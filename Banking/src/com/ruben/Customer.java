@@ -14,7 +14,6 @@ package com.ruben;
 public class Customer {
 
 	private String name = null;
-
 	private String password = null;
 	private boolean valid = false;
 	
@@ -25,6 +24,13 @@ public class Customer {
 			this.valid = true;
 		}
 	}
+	/**
+	 * getInstance will return a instance of the Customer class, it is defined as static so it can be used without being 
+	 * substantiated, ie. Customer.getInstance(username, password)
+	 * @param aName
+	 * @param aPassword
+	 * @return Customer
+	 */
 	public static Customer getInstance(String aName, String aPassword) {
 		return new Customer(aName, aPassword);
 	}

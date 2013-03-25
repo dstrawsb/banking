@@ -25,12 +25,16 @@ public class BankAccount
   /**
  * @return
  */
-  public double getBalance() {return balance;} 
+  public double getBalance() {
+	  return balance;
+  } 
   
   /**
  * interest
  */
-  public void   interest()   {balance *= 1.0 + interest_rate;}
+  public void interest() {
+	  balance *= 1.0 + interest_rate;
+  }
   
   /**
  * @return true if customers were loaded, false if no customers exist
