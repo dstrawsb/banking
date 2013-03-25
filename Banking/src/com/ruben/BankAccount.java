@@ -39,8 +39,8 @@ public class BankAccount
   /**
  * @return true if customers were loaded, false if no customers exist
  */
-public boolean loadCustomer(String aName, String aPassword) {
-	customers.put(aName, Customer.getInstance(aName, aPassword));
+public boolean loadCustomer(String aName, String aPassword, AccountTypes aAccountType) {
+	customers.put(aName, Customer.getInstance(aName, aPassword, aAccountType));
 		if (customers.isEmpty()) {
 			return false;
 		} else {

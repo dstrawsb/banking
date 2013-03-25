@@ -3,6 +3,8 @@
  */
 package com.ruben;
 
+import java.util.ArrayList;
+
 /**
  * @author Petr Ruben
  *
@@ -16,8 +18,9 @@ public class Customer {
 	private String name = null;
 	private String password = null;
 	private boolean valid = false;
+	private ArrayList accounts = new ArrayList(); 		
 	
-	public Customer(String aName, String aPassword) {
+	public Customer(String aName, String aPassword, AccountTypes accountType) {
 		this.name = aName;
 		this.password = aPassword;
 		if(this.name != null && this.password != null) {
@@ -31,8 +34,8 @@ public class Customer {
 	 * @param aPassword
 	 * @return Customer
 	 */
-	public static Customer getInstance(String aName, String aPassword) {
-		return new Customer(aName, aPassword);
+	public static Customer getInstance(String aName, String aPassword, AccountTypes accountType) {
+		return new Customer(aName, aPassword, accountType);
 	}
 	
 	/**

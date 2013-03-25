@@ -12,7 +12,8 @@ public class SavingsAccount extends BankAccount implements PrintChoicesMenu {
 	}
 
 	public void interest() {
-		final double MIN_BAL = 1000.0, PENALTY = 25.0;
+		final double MIN_BAL = 1000.0;
+		final double PENALTY = 25.0;
 
 		super.interest();
 		if (balance < MIN_BAL)
