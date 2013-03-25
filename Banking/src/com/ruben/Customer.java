@@ -25,10 +25,13 @@ public class Customer {
 			this.valid = true;
 		}
 	}
+	public static Customer getInstance(String aName, String aPassword) {
+		return new Customer(aName, aPassword);
+	}
 	
 	/**
 	 * @return the name
-	 *
+	 */
 	public String getName() {
 		return name;
 	}
