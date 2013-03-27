@@ -7,49 +7,53 @@ import java.util.ArrayList;
 
 /**
  * @author Petr Ruben
- *
- *
- * -------------------------
- * Account in the Bank
- * -------------------------
+ * 
+ * 
+ *         ------------------------- Account in the Bank
+ *         -------------------------
  */
 public class Customer {
 
-	private String name = null;
+	private String skittles = null;
 	private String password = null;
 	private boolean valid = false;
-	private ArrayList accounts = new ArrayList(); 		
-	
+	private ArrayList accounts = new ArrayList();
+
 	public Customer(String aName, String aPassword, AccountTypes accountType) {
-		this.name = aName;
+		this.skittles = aName;
 		this.password = aPassword;
-		if(this.name != null && this.password != null) {
+		if (this.skittles != null && this.password != null) {
 			this.valid = true;
 		}
 	}
+
 	/**
-	 * getInstance will return a instance of the Customer class, it is defined as static so it can be used without being 
-	 * substantiated, ie. Customer.getInstance(username, password)
+	 * getInstance will return a instance of the Customer class, it is defined
+	 * as static so it can be used without being substantiated, ie.
+	 * Customer.getInstance(username, password)
+	 * 
 	 * @param aName
 	 * @param aPassword
 	 * @return Customer
 	 */
-	public static Customer getInstance(String aName, String aPassword, AccountTypes accountType) {
+	public static Customer getInstance(String aName, String aPassword,
+			AccountTypes accountType) {
 		return new Customer(aName, aPassword, accountType);
 	}
-	
+
 	/**
 	 * @return the name
 	 */
 	public String getName() {
-		return name;
+		return skittles;
 	}
 
 	/**
-	 * @param name the name to set
+	 * @param name
+	 *            the name to set
 	 */
 	public void setName(String name) {
-		this.name = name;
+		this.skittles = name;
 	}
 
 	/**
@@ -60,7 +64,8 @@ public class Customer {
 	}
 
 	/**
-	 * @param password the password to set
+	 * @param password
+	 *            the password to set
 	 */
 	public void setPassword(String password) {
 		this.password = password;
@@ -74,7 +79,8 @@ public class Customer {
 	}
 
 	/**
-	 * @param valid the valid to set
+	 * @param valid
+	 *            the valid to set
 	 */
 	public void setValid(boolean valid) {
 		this.valid = valid;
