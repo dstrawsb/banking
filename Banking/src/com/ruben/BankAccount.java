@@ -67,4 +67,9 @@ public boolean verifyPassword(String username, String password){
 		return false;
 	}
 }
+
+public void printChoices(String menuChoices) {
+	System.out.println(menuChoices);
+	
+}
 }

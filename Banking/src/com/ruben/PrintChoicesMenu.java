@@ -9,6 +9,6 @@ package com.ruben;
  */
 public interface PrintChoicesMenu {
 
-	public void printChoices();
+	public String getMenuChoices();
 	
 }

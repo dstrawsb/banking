@@ -20,9 +20,17 @@ public class SavingsAccount extends BankAccount implements PrintChoicesMenu {
 			balance -= balance < PENALTY ? balance : PENALTY;
 	}
 	
-	@Override
-	public void printChoices() {
-		System.out.println(menuChoices);
-		
+	/**
+	 * @return the menuChoices
+	 */
+	public String getMenuChoices() {
+		return menuChoices;
+	}
+
+	/**
+	 * @param menuChoices the menuChoices to set
+	 */
+	public void setMenuChoices(String menuChoices) {
+		this.menuChoices = menuChoices;
 	}
 }
