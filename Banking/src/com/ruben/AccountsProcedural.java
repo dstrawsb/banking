@@ -1,3 +1,4 @@
+package com.ruben;
 // ---------------------------------------------
 // Problem Description:
 //   AccountsProcedural applet
@@ -5,6 +6,7 @@
 // Demonstrates:
 //   Using a procedural approach
 // ---------------------------------------------
+
 
 import javax.swing.*;
 import java.awt.*;
