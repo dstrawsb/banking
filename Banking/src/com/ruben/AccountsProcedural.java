@@ -15,9 +15,9 @@ import java.text.NumberFormat;
 
 public class AccountsProcedural extends JApplet implements NewInterface {
 
-    final int CHECKING = 0,
-            SAVINGS = 1,
-            CD = 2;
+    final int CHECKING = 0;
+    final int SAVINGS = 1;
+    final int CD = 2;
     final int FIELD_WIDTH = 12;
     JTextField balance_field = new JTextField(FIELD_WIDTH);
     String[] s = {"Checking", "Savings", "CD"};
@@ -43,15 +43,15 @@ public class AccountsProcedural extends JApplet implements NewInterface {
             b[i].addActionListener(this);
             c.add(b[i]);
         }
-    }
+    } 
 
     // ===============
     // Process Buttons
     // ===============
     public void actionPerformed(ActionEvent e) {
-        final double CHECKING_RATE = 0.01,
-                SAVINGS_RATE = 0.02,
-                CD_RATE = 0.03;
+        final double CHECKING_RATE = 0.01;
+        final double SAVINGS_RATE = 0.02;
+        final double CD_RATE = 0.03;
         double balance;
 
         if (e.getSource() == b[CHECKING]) {
@@ -117,8 +117,8 @@ public class AccountsProcedural extends JApplet implements NewInterface {
     // Checking account specific interest calculation
     // ==============================================
     private void checkingInterest(BankAccount ba) {
-        final double MIN_BAL = 100.0,
-                PENALTY = 10.0;
+        final double MIN_BAL = 100.0;
+        final double PENALTY = 10.0;
 
         ba.balance *= 1.0 + ba.interest_rate;
         if (ba.balance < MIN_BAL) {
@@ -130,8 +130,8 @@ public class AccountsProcedural extends JApplet implements NewInterface {
     // Savings account specific interest calculation
     // =============================================
     private void savingsInterest(BankAccount ba) {
-        final double MIN_BAL = 1000.0,
-                PENALTY = 25.0;
+        final double MIN_BAL = 1000.0;
+        final double PENALTY = 25.0;
 
         ba.balance *= 1.0 + ba.interest_rate;
         if (ba.balance < MIN_BAL) {
@@ -140,8 +140,8 @@ public class AccountsProcedural extends JApplet implements NewInterface {
     }
 
     private void cdInterest(BankAccount ba) {
-        final double MIN_BAL = 1000.0,
-                PENALTY = 25.0;
+        final double MIN_BAL = 1000.0;
+        final double PENALTY = 25.0;
 
         ba.balance *= 1.0 + ba.interest_rate;
     }
@@ -153,8 +153,8 @@ public class AccountsProcedural extends JApplet implements NewInterface {
     class BankAccount {
 
         int account_type;
-        double interest_rate,
-                balance;
+        double interest_rate;
+        double balance;
 
         public BankAccount(int t, double i, double b) {
             account_type = t;
