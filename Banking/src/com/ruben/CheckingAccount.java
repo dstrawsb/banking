@@ -11,9 +11,10 @@ package com.ruben;
 public class CheckingAccount extends BankAccount implements PrintChoicesMenu {
 
 	private String menuChoices = "need a string for all the choices";
-	
+
 	public CheckingAccount(double i, double b) {
 		super(i, b);
+		setAccountType(AccountTypes.CHECKING);
 	}
 
 	public void interest() {

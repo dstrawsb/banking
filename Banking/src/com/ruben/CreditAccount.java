@@ -13,6 +13,7 @@ public class CreditAccount extends BankAccount implements PrintChoicesMenu {
 
 	public CreditAccount(double i, double b) {
 		super(i, b);
+		setAccountType(AccountTypes.CREDIT);
 	}
 
 	public void interest() {

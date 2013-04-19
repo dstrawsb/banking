@@ -1,3 +1,4 @@
+package com.ruben;
 // ---------------------------------------------
 // Problem Description:
 //   AccountsProcedural applet
@@ -6,6 +7,7 @@
 //   Using a procedural approach
 // ---------------------------------------------
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -13,9 +15,9 @@ import java.text.NumberFormat;
 
 public class AccountsProcedural extends JApplet implements NewInterface {
 
-    final int CHECKING = 0,
-            SAVINGS = 1,
-            CD = 2;
+    final int CHECKING = 0;
+    final int SAVINGS = 1;
+    final int CD = 2;
     final int FIELD_WIDTH = 12;
     JTextField balance_field = new JTextField(FIELD_WIDTH);
     String[] s = {"Checking", "Savings", "CD"};
@@ -47,9 +49,9 @@ public class AccountsProcedural extends JApplet implements NewInterface {
     // Process Buttons
     // ===============
     public void actionPerformed(ActionEvent e) {
-        final double CHECKING_RATE = 0.01,
-                SAVINGS_RATE = 0.02,
-                CD_RATE = 0.03;
+        final double CHECKING_RATE = 0.01;
+        final double SAVINGS_RATE = 0.02;
+        final double CD_RATE = 0.03;
         double balance;
 
         if (e.getSource() == b[CHECKING]) {
@@ -138,8 +140,8 @@ public class AccountsProcedural extends JApplet implements NewInterface {
     }
 
     private void cdInterest(BankAccount ba) {
-        final double MIN_BAL = 1000.0,
-                PENALTY = 25.0;
+        final double MIN_BAL = 1000.0;
+        final double PENALTY = 25.0;
 
         ba.balance *= 1.0 + ba.interest_rate;
     }
