@@ -13,7 +13,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.text.NumberFormat;
 
-public class AccountsProcedural extends JApplet implements NewInterface {
+public class AccountsProcedural extends JApplet implements AccountsActions {
 
     final int CHECKING = 0;
     final int SAVINGS = 1;

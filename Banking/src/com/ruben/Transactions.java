@@ -1,3 +1,5 @@
+package com.ruben;
+
 public class Transactions
 {
 	public static void main (String[] args)
@@ -8,7 +10,7 @@ public class Transactions
 	
 	acct1.deposit (3000.00);
 	
-	double donBalance = aact1.deposit (1000.00);
+	double donBalance = acct1.deposit (1000.00);
 	System.out.println ("Don's balance after deposit: " + donBalance);
 	
 	System.out.println ("Don balance after withdrawal: " +acct1.withdraw (600.00, 2.50));
