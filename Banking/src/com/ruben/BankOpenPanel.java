@@ -12,22 +12,22 @@ public class BankOpenPanel extends JPanel
 	public BankOpenPanel ()
 	{
 	okay = new JButton ("Okay");
-	canel = new JButton ("Canel");
+	cancel = new JButton ("Cancel");
 	
-	ButtonListener = new ButtonListener():
+	ButtonListener = new ButtonListener();
 	okay.addActionListener (listener);
 	cancel.addActionListener (listener);
 	
 	label = new JLabel ("Click \"Okay\" to continue");
 	
-	nuttonPanel = new JPanel();
+	buttonPanel = new JPanel();
 	buttonPanel.setPreferredSize (new Dimension (200, 40));
-	buttonPanel.setBackground (Color.tellow);
+	buttonPanel.setBackground (Color.yellow);
 	buttonPanel.add (okay);
 	buttonPanel.add (cancel);
 	
-	setPrederredSize (new Dimension(200,80));
-	setBackgroun (Color.green);
+	setPreferredSize (new Dimension(200,80));
+	setBackground (Color.green);
 	add (label);
 	add (buttonPanel);
 	}
