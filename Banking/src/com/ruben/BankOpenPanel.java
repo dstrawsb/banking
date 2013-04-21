@@ -3,8 +3,13 @@ package com.ruben;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.applet.*;
 
-public class BankOpenPanel extends JPanel {
+public class BankOpenPanel extends Applet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JButton okay, cancel;
 	private JLabel label;
 	private JPanel buttonPanel;
