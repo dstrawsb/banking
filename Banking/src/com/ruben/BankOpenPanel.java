@@ -4,7 +4,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.applet.*;
-import java.util.ArrayList;
 
 public class BankOpenPanel extends Applet {
 	/**
