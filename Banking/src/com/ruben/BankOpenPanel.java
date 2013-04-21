@@ -5,18 +5,20 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.applet.*;
 
-public class BankOpenPanel extends Applet {
-	/**
-	 * 
-	 */
+public class BankOpenPanel extends Applet 
+{
+	
+	//what is serialVersion?
 	private static final long serialVersionUID = 1L;
 	private JButton okay = null;
 	private JButton cancel = null;
-	private JLabel label = null;
+	private JLabel label1 = null;
+	private JLabel label2 = null;
 	private JPanel buttonPanel = null;
 	private Bank rubenBank = null;
 
-	public BankOpenPanel() {
+	public BankOpenPanel() 
+	{
 		rubenBank = Bank.getInstance("Ruben Bank");
 		rubenBank.addAccount(new Account("Don Strawsburg", 10001, 102.56));
 		rubenBank.addAccount(new Account("Jessica Strawsburg", 10003, 759.32));
@@ -30,7 +32,8 @@ public class BankOpenPanel extends Applet {
 		okay.addActionListener(listener);
 		cancel.addActionListener(listener);
 
-		label = new JLabel("Click \"Okay\" to continue");
+		label1 = new JLabel("--Click \"Okay\" to continue-- OR");
+		label2 = new JLabel("--Click \"Cancel\" to cancel--");
 
 		buttonPanel = new JPanel();
 		buttonPanel.setPreferredSize(new Dimension(200, 40));
@@ -38,9 +41,10 @@ public class BankOpenPanel extends Applet {
 		buttonPanel.add(okay);
 		buttonPanel.add(cancel);
 
-		setPreferredSize(new Dimension(200, 80));
+		setPreferredSize(new Dimension(400, 200));
 		setBackground(Color.green);
-		add(label);
+		add(label1);
+		add(label2);
 		add(buttonPanel);
 
 		okay = new JButton("Okay");
@@ -49,27 +53,15 @@ public class BankOpenPanel extends Applet {
 		okay.addActionListener(listener);
 		cancel.addActionListener(listener);
 
-		label = new JLabel("Click \"Okay\" to continue");
-
-		buttonPanel = new JPanel();
-		buttonPanel.setPreferredSize(new Dimension(200, 40));
-		buttonPanel.setBackground(Color.yellow);
-		buttonPanel.add(okay);
-		buttonPanel.add(cancel);
-
-		setPreferredSize(new Dimension(200, 80));
-		setBackground(Color.green);
-		add(label);
-		add(buttonPanel);
 	}
 
 	private class ButtonListener implements ActionListener {
 
 		public void actionPerformed(ActionEvent event) {
 			if (event.getSource() == okay)
-				label.setText("Okay");
+				label1.setText("Okay");
 			else
-				label.setText("Cancel");
+				label1.setText("Cancel");
 			}
 	}
 }

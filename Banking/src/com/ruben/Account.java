@@ -41,38 +41,28 @@ public class Account {
 		return acctNumber + "\t" + name + "\t" + fmt.format(balance);
 	}
 
-	/**
-	 * @return the name
-	 */
-	public String getName() {
+	public String getName() 
+	{
 		return name;
 	}
 
-	/**
-	 * @return the acctNumber
-	 */
-	public long getAcctNumber() {
+	public long getAcctNumber() 
+	{
 		return acctNumber;
 	}
 
-	/**
-	 * @param balance the balance to set
-	 */
-	public void setBalance(double balance) {
+	public void setBalance(double balance) 
+	{
 		this.balance = balance;
 	}
 	
-	/**
-	 * @param name the name to set
-	 */
-	private void setName(String name) {
+	private void setName(String name) 
+	{
 		this.name = name;
 	}
 
-	/**
-	 * @param acctNumber the acctNumber to set
-	 */
-	private void setAcctNumber(long acctNumber) {
+	private void setAcctNumber(long acctNumber) 
+	{
 		this.acctNumber = acctNumber;
 	}
 }
