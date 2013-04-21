@@ -1,4 +1,6 @@
-public class Transaction
+package com.ruben;
+
+public class Transactions
 {
 	public static void main (String[] args)
 	{

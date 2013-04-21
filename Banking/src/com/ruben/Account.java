@@ -1,4 +1,15 @@
-public Account (String owner, long account, double initial)
+package com.ruben;
+
+import java.text.NumberFormat;
+
+public class Account {
+	
+	private static final double RATE = 0;
+	private String name;
+	private long acctNumber;
+	private double balance;
+	
+	public Account (String owner, long account, double initial)	
 	{
 		name = owner;
 		acctNumber = account;

@@ -15,7 +15,7 @@ public class BankOpenPanel extends JPanel {
 	okay = new JButton ("Okay");
 	cancel = new JButton ("Cancel");
 	
-	ButtonListener = new ButtonListener();
+	ButtonListener listener = new ButtonListener();
 	okay.addActionListener (listener);
 	cancel.addActionListener (listener);
 	
@@ -35,7 +35,6 @@ public class BankOpenPanel extends JPanel {
 		okay = new JButton ("Okay");
 		cancel = new JButton ("Canel");
 
-		ButtonListener listener = new ButtonListener();
 		okay.addActionListener (listener);
 		cancel.addActionListener (listener);
 
