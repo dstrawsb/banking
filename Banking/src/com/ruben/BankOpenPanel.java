@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.applet.*;
+import java.util.ArrayList;
 
 public class BankOpenPanel extends Applet {
 	/**
@@ -14,13 +15,14 @@ public class BankOpenPanel extends Applet {
 	private JButton cancel = null;
 	private JLabel label = null;
 	private JPanel buttonPanel = null;
-	Account acct1 = null;
-	Account acct2 = null;
-	Account acct3 = null;
+	private Bank rubenBank = null;
 
 	public BankOpenPanel() {
-
-		loadTransactions();
+		rubenBank = Bank.getInstance("Ruben Bank");
+		rubenBank.addAccount(new Account("Don Strawsburg", 10001, 102.56));
+		rubenBank.addAccount(new Account("Jessica Strawsburg", 10003, 759.32));
+		rubenBank.addAccount(new Account("Petr Ruben", 10002, 40.00));
+		rubenBank.getAccountByNumber(10001).deposit(25.85);
 
 		okay = new JButton("Okay");
 		cancel = new JButton("Cancel");
@@ -60,7 +62,6 @@ public class BankOpenPanel extends Applet {
 		setBackground(Color.green);
 		add(label);
 		add(buttonPanel);
-
 	}
 
 	private class ButtonListener implements ActionListener {
@@ -68,17 +69,8 @@ public class BankOpenPanel extends Applet {
 		public void actionPerformed(ActionEvent event) {
 			if (event.getSource() == okay)
 				label.setText("Okay");
-
 			else
 				label.setText("Cancel");
-		}
-	}
-
-	public void loadTransactions() {
-		acct1 = new Account("Don Strawsburg", 10001, 102.56);
-		acct2 = new Account("Petr Ruben", 10002, 40.00);
-		acct3 = new Account("Jessica Strawsburg", 10003, 759.32);
-
-		acct1.deposit(25.85);
+			}
 	}
 }
